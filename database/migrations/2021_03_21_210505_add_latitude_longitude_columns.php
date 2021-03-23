@@ -14,8 +14,8 @@ class AddLatitudeLongitudeColumns extends Migration
     public function up()
     {
         Schema::table('cities', function (Blueprint $table) {
-            $table->decimal('latitude', 10, 7);
-            $table->decimal('longitude', 10, 7);
+            $table->decimal('latitude', 10, 7)->nullable();
+            $table->decimal('longitude', 10, 7)->nullable();
         });
     }
 
